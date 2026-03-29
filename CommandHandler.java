@@ -16,24 +16,25 @@ public class CommandHandler implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage("§cPlayers only!");
+            sender.sendMessage("§cOnly players can use this command!");
             return true;
         }
 
         Player player = (Player) sender;
+
         if (!player.isOp()) {
-            player.sendMessage("§cAdmin only!");
+            player.sendMessage("§cYou must be an admin (OP) to use this command!");
             return true;
         }
 
         if (cmd.getName().equalsIgnoreCase("buildlibrary")) {
-            player.sendMessage("§6[Library] §eBuilding full dungeon...");
+            player.sendMessage("§6[Library] §eBuilding the full dungeon 10 blocks in front of you...");
             plugin.getStructureBuilder().buildFullDungeon(player);
             return true;
         }
 
         if (cmd.getName().equalsIgnoreCase("regeneratelibrary")) {
-            player.sendMessage("§6[Library] §eRegenerating dungeon...");
+            player.sendMessage("§6[Library] §eRegenerating the entire dungeon...");
             plugin.getStructureBuilder().regenerateDungeon(player);
             return true;
         }
