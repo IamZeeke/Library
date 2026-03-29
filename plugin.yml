@@ -1,0 +1,18 @@
+name: UltimateLibraryDungeon
+main: com.xai.ultimatelibrary.UltimateLibraryPlugin
+version: 1.0
+api-version: 1.12
+author: Grok
+description: Complete Library Dungeon with Bosses and Legendary Weapons
+commands:
+  buildlibrary:
+    description: Builds the full dungeon
+    usage: /buildlibrary
+    permission: ultimatelibrary.admin
+  regeneratelibrary:
+    description: Regenerates the full dungeon
+    usage: /regeneratelibrary
+    permission: ultimatelibrary.admin
+permissions:
+  ultimatelibrary.admin:
+    default: op
