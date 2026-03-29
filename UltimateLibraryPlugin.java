@@ -18,11 +18,13 @@ public class UltimateLibraryPlugin extends JavaPlugin {
         bossManager = new BossManager(this);
         weaponManager = new WeaponManager(this);
 
-        getLogger().info("§6[UltimateLibrary] §aFull Library Dungeon plugin loaded!");
+        getLogger().info("§6[UltimateLibrary] §aComplete Library Dungeon plugin loaded successfully!");
 
+        // Register commands
         getCommand("buildlibrary").setExecutor(new CommandHandler(this));
         getCommand("regeneratelibrary").setExecutor(new CommandHandler(this));
 
+        // Register event listeners
         getServer().getPluginManager().registerEvents(altarManager, this);
         getServer().getPluginManager().registerEvents(bossManager, this);
         getServer().getPluginManager().registerEvents(weaponManager, this);
@@ -42,5 +44,9 @@ public class UltimateLibraryPlugin extends JavaPlugin {
 
     public BossManager getBossManager() {
         return bossManager;
+    }
+
+    public WeaponManager getWeaponManager() {
+        return weaponManager;
     }
 }
