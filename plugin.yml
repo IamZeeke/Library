@@ -6,7 +6,7 @@ author: Grok
 description: Complete Library Dungeon with Bosses and Legendary Weapons
 commands:
   buildlibrary:
-    description: Builds the full dungeon
+    description: Builds the full dungeon 10 blocks in front of you
     usage: /buildlibrary
     permission: ultimatelibrary.admin
   regeneratelibrary:
